@@ -217,6 +217,8 @@ function firstFunction(array: number[]): number {
 //Tarea 2: Implementa una funcion que reciba tres parametros y retorne error si almenos uno de los parametros pasados no es del tipo de los dos primeros parametros. 
 //Asegurarse que los dos primeros parametros sean del mismo tipo.
 
-function validate (para1: any) {
-
+function validate (para1: string, para2: string, para3: any): string {
+    return typeof para1 && typeof para2 !== typeof para3 ? `Para3: ${typeof para3}, no es del mismo tipo de para1 y para2` : `Para3: ${typeof para3}, es del mismo tipo de para1 y para2`;
 };
+
+console.log(validate("hola", "luis", "1"));
